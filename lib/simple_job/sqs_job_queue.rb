@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 require 'socket'
-require 'aws-sdk'
+require 'aws-sdk-sqs'
+require 'aws-sdk-cloudwatch'
 
 module SimpleJob
   # A SimpleJob::JobQueue implementation that uses AWS SQS
