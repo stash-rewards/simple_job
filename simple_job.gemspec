@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   # dependencies
-  s.add_dependency 'activemodel', '> 4.2', '< 6'
-  s.add_dependency 'activesupport', '> 4.2', '< 6'
+  s.add_dependency 'activemodel', '> 4.2', '< 7'
+  s.add_dependency 'activesupport', '> 4.2', '< 7'
   s.add_dependency 'aws-sdk', '~> 2.10'
 end
