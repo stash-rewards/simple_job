@@ -11,11 +11,14 @@ end
 group :test do
   gem 'rspec', '~> 3.7'
 
-  # The VCR cassettes were recorded against SQS's legacy Query/XML protocol
-  # (lockfile era: aws-sdk-sqs 1.35). aws-sdk-sqs >= 1.57 switched SQS to the
-  # AWS JSON protocol and cannot play them back (Aws::Json::ParseError on the
-  # recorded XML bodies). Test-only pin; the gemspec's runtime '~> 1' stands.
+  # The VCR cassettes were recorded against the legacy Query/XML protocol
+  # (lockfile era: aws-sdk-sqs 1.35 / aws-sdk-cloudwatch 1.47). Newer service
+  # gems switched to the AWS JSON protocol and cannot play the recorded XML
+  # back (Aws::Json::ParseError; the CloudWatch one is swallowed by poll's
+  # rescue and shows up as an empty result). Test-only pins; the gemspec's
+  # runtime '~> 1' constraints stand.
   gem 'aws-sdk-sqs', '< 1.57'
+  gem 'aws-sdk-cloudwatch', '~> 1.47.0'
 
   gem 'byebug'
   gem 'rubocop'
