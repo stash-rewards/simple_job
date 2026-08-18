@@ -1,5 +1,12 @@
 # frozen_string_literal: true
 
+require 'logger' # must load before activesupport (concurrent-ruby >= 1.3.5 no longer pulls it in)
+
+# Aws::*::Client.new needs region/credentials even under VCR playback; real env still wins.
+ENV['AWS_REGION'] ||= 'us-east-1'
+ENV['AWS_ACCESS_KEY_ID'] ||= 'test'
+ENV['AWS_SECRET_ACCESS_KEY'] ||= 'test'
+
 require 'byebug'
 require 'support/vcr_setup'
 require 'support/simplecov_setup'
