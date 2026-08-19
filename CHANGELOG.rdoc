@@ -1,5 +1,8 @@
 = Simple Job
 
+== Version 0.17.1
+* widen activemodel/activesupport ceiling to < 7 (Rails 6.x support); no code changes
+
 == Version 0.17.0
 * upgraded to aws-sdk v3
 
