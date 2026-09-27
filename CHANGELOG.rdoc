@@ -1,5 +1,9 @@
 = Simple Job
 
+== Version 0.17.2
+* Ruby 3 support: pass SQSJobQueue.define_queue options to initialize as keyword arguments
+* update .ruby-version to 3.2.11
+
 == Version 0.17.1
 * widen activemodel/activesupport ceiling to < 7 (Rails 6.x support); no code changes
 

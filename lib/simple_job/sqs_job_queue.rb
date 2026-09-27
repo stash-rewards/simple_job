@@ -70,7 +70,7 @@ module SimpleJob
       }.merge(options)
       make_default = options.delete(:default)
 
-      queue = new(type, options)
+      queue = new(type, **options)
       self.queues ||= {}
       self.queues[type] = queue
 
