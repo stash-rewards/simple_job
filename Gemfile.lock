@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    simple_job (0.17.1)
+    simple_job (0.17.2)
       activemodel (> 4.2, < 7)
       activesupport (> 4.2, < 7)
       aws-sdk-cloudwatch (~> 1)
@@ -114,6 +114,7 @@ GEM
 
 PLATFORMS
   aarch64-linux
+  ruby
 
 DEPENDENCIES
   activemodel (~> 6.1.0)
@@ -131,4 +132,4 @@ DEPENDENCIES
   webmock (~> 3.1.1)
 
 BUNDLED WITH
-   2.2.4
+   2.4.19
