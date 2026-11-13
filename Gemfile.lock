@@ -1,9 +1,9 @@
 PATH
   remote: .
   specs:
-    simple_job (0.17.2)
-      activemodel (> 4.2, < 7)
-      activesupport (> 4.2, < 7)
+    simple_job (0.17.3)
+      activemodel (>= 6.1, < 8.2)
+      activesupport (>= 6.1, < 8.2)
       aws-sdk-cloudwatch (~> 1)
       aws-sdk-sqs (~> 1)
 
